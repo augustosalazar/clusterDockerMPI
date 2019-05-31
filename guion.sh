@@ -7,7 +7,7 @@ docker stop dockeropenmpi_mpi_node_4
 docker stop dockeropenmpi_mpi_node_5
 docker stop dockeropenmpi_mpi_node_6
 
-docker rmi -f $(docker images -q)
+#docker rmi -f $(docker images -q)
 
 docker-compose build
 
