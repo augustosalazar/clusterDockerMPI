@@ -2,11 +2,7 @@ echo "RESULTADOS DE ALGORITMO PRIMOS"
 echo "------------------------------"
 echo "------------------------------"
 
-rm -rf machines
-
-sed -e 's/#.*//' -e 's/[[:blank:]]*$//' -e '/^$/d' -e '/^f/d' -e '/^:/d' /etc/hosts | awk '{print $1}' >> machines
-
-sort -u machines
+rm -rf machines && sed -e 's/#.*//' -e 's/[[:blank:]]*$//' -e '/^$/d' -e '/^f/d' -e '/^:/d' -e '/^127/d' /etc/hosts | awk '{print $1, "\t", "slots=4 max-slots=4"}' >> machines && sort -u machines
 
 echo "------ TEST BEGINS -----------"
 for cores in {2..16..2}

@@ -11,16 +11,8 @@ When inside the container
 
 3. su mpirun
 4. cd /home/mpirun/app/
-5. sudo +x testScript.sh
+5. ./createMachines.sh
 
-Aquí el script de prueba para los primos es test.sh
+The following should verify that the system is working (n can double the number of (nodes + head )):
 
-Ejemplo:
-
-./test.sh g3.py > resultadosG3
-./test.sh g7.py > resultadosG/
-./test.sh ParallelPrimes.py > resultadoProfesor
-
-
-
-
+mpirun -n 14 -hostfile machines hostname
