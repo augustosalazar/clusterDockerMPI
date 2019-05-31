@@ -1,0 +1,25 @@
+Usando el código de:
+
+https://github.com/oweidner/docker.openmpi
+
+Instructions:
+
+1. sh ./guion.sh
+2. docker exec -it dockeropenmpi_mpi_head_1 bash
+
+When inside the container
+
+3. su mpirun
+4. cd /home/mpirun/
+
+Aquí el script de prueba para los primos es test.sh
+
+Ejemplo:
+
+./test.sh g3.py > resultadosG3
+./test.sh g7.py > resultadosG/
+./test.sh ParallelPrimes.py > resultadoProfesor
+
+
+
+
