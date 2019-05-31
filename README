@@ -11,7 +11,7 @@ When inside the container
 
 3. su mpirun
 4. cd /home/mpirun/app/
-5. sudo +x test.sh
+5. sudo +x testScript.sh
 
 Aquí el script de prueba para los primos es test.sh
 
